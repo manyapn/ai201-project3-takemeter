@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.streamlit/
+.venv/
+venv/
+
+# Local training/model outputs
+runs/
+checkpoint-*/
+data/raw_reddit/
+data/*.normalized.csv
+
+# Real generated outputs are intentionally committed after training.
+# Keep these commented as a reminder, not an ignore rule:
+# evaluation_results.json
+# confusion_matrix.png

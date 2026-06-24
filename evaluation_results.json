@@ -1,0 +1,82 @@
+{
+  "baseline_accuracy": 0.5,
+  "finetuned_accuracy": 0.5867,
+  "improvement": 0.0867,
+  "test_set_size": 600,
+  "baseline_parseable_count": 600,
+  "label_map": {
+    "poster_blamed": 0,
+    "poster_not_blamed": 1
+  },
+  "model": "TF-IDF + LogisticRegression",
+  "training_note": "Fast local fallback model trained on a balanced binary AITA blame dataset.",
+  "baseline_note": "Majority-class baseline from training split: poster_blamed. Groq baseline was also run separately on the earlier 30-example DistilBERT split.",
+  "baseline_report": {
+    "poster_blamed": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1-score": 0.6666666666666666,
+      "support": 300.0
+    },
+    "poster_not_blamed": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 300.0
+    },
+    "accuracy": 0.5,
+    "macro avg": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 600.0
+    },
+    "weighted avg": {
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1-score": 0.3333333333333333,
+      "support": 600.0
+    }
+  },
+  "finetuned_report": {
+    "poster_blamed": {
+      "precision": 0.5833333333333334,
+      "recall": 0.6066666666666667,
+      "f1-score": 0.5947712418300654,
+      "support": 300.0
+    },
+    "poster_not_blamed": {
+      "precision": 0.5902777777777778,
+      "recall": 0.5666666666666667,
+      "f1-score": 0.5782312925170068,
+      "support": 300.0
+    },
+    "accuracy": 0.5866666666666667,
+    "macro avg": {
+      "precision": 0.5868055555555556,
+      "recall": 0.5866666666666667,
+      "f1-score": 0.5865012671735361,
+      "support": 600.0
+    },
+    "weighted avg": {
+      "precision": 0.5868055555555556,
+      "recall": 0.5866666666666667,
+      "f1-score": 0.5865012671735361,
+      "support": 600.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      182,
+      118
+    ],
+    [
+      130,
+      170
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "poster_blamed",
+    "poster_not_blamed"
+  ]
+}
